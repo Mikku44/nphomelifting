@@ -18,13 +18,13 @@ export function meta({ }: Route.MetaArgs) {
     { property: "og:description", content: "แก้ปัญหาบ้านทรุด บ้านเอียง รอยร้าว รับดีดบ้าน ยกบ้าน ย้ายบ้าน เลื่อนบ้าน โดย N&P คอนสตรัคชั่น" },
     { property: "og:type", content: "website" },
     { property: "og:url", content: "https://nphomelifting.com" },
-    { property: "og:image", content: "https://nphomelifting.com/cover-image.png" },
+    { property: "og:image", content: "https://nphomelifting.vercel.app/cover-image.png" },
     { property: "og:locale", content: "th_TH" },
     { property: "og:site_name", content: "N&P คอนสตรัคชั่น" },
     { name: "twitter:card", content: "summary_large_image" },
     { name: "twitter:title", content: "รีบดีดบ้าน ยกบ้าน ย้ายบ้าน เลื่อนบ้าน กรุงเทพ | โดย N&P คอนสตรัคชั่น" },
     { name: "twitter:description", content: "แก้ปัญหาบ้านทรุด บ้านเอียง รอยร้าว รับดีดบ้าน ยกบ้าน ย้ายบ้าน เลื่อนบ้าน โดย N&P คอนสตรัคชั่น" },
-    { name: "twitter:image", content: "https://nphomelifting.com/cover-image.png" },
+    { name: "twitter:image", content: "https://nphomelifting.vercel.app/cover-image.png" },
     { tagName: "link", rel: "canonical", href: "https://nphomelifting.com" },
   ];
 }

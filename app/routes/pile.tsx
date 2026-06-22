@@ -16,12 +16,12 @@ export function meta({}: Route.MetaArgs) {
     { property: "og:description", content: "บริการตอกเสาเข็มไอบีม เสาเข็มซีเมนต์ เปลี่ยนเสาเข็ม โดยทีมช่างมืออาชีพ N&P คอนสตรัคชั่น" },
     { property: "og:type", content: "website" },
     { property: "og:url", content: "https://nphomelifting.com/pile" },
-    { property: "og:image", content: "https://nphomelifting.com/cover-image.png" },
+    { property: "og:image", content: "https://nphomelifting.vercel.app/cover-image.png" },
     { property: "og:locale", content: "th_TH" },
     { name: "twitter:card", content: "summary_large_image" },
     { name: "twitter:title", content: "บริการตอกเสาเข็ม | N&P คอนสตรัคชั่น" },
     { name: "twitter:description", content: "บริการตอกเสาเข็มไอบีม เสาเข็มซีเมนต์ เปลี่ยนเสาเข็ม โดยทีมช่างมืออาชีพ N&P คอนสตรัคชั่น" },
-    { name: "twitter:image", content: "https://nphomelifting.com/cover-image.png" },
+    { name: "twitter:image", content: "https://nphomelifting.vercel.app/cover-image.png" },
     { tagName: "link", rel: "canonical", href: "https://nphomelifting.com/pile" },
   ];
 }

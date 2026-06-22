@@ -16,12 +16,12 @@ export function meta({}: Route.MetaArgs) {
     { property: "og:description", content: "รับย้ายบ้าน เลื่อนบ้าน เคลื่อนย้ายบ้าน โดยทีมงานมืออาชีพ N&P คอนสตรัคชั่น" },
     { property: "og:type", content: "website" },
     { property: "og:url", content: "https://nphomelifting.com/house-moving" },
-    { property: "og:image", content: "https://nphomelifting.com/cover-image.png" },
+    { property: "og:image", content: "https://nphomelifting.vercel.app/cover-image.png" },
     { property: "og:locale", content: "th_TH" },
     { name: "twitter:card", content: "summary_large_image" },
     { name: "twitter:title", content: "รับย้ายบ้าน | N&P คอนสตรัคชั่น" },
     { name: "twitter:description", content: "รับย้ายบ้าน เลื่อนบ้าน เคลื่อนย้ายบ้าน โดยทีมงานมืออาชีพ N&P คอนสตรัคชั่น" },
-    { name: "twitter:image", content: "https://nphomelifting.com/cover-image.png" },
+    { name: "twitter:image", content: "https://nphomelifting.vercel.app/cover-image.png" },
     { tagName: "link", rel: "canonical", href: "https://nphomelifting.com/house-moving" },
   ];
 }

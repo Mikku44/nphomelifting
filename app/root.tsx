@@ -5,6 +5,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useNavigation,
   // useLocation,
 } from "react-router";
 
@@ -49,12 +50,17 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  // const location = useLocation();
-  // const isHome = location.pathname === "/";
+  const navigation = useNavigation();
+  const loading = navigation.state !== "idle";
 
   return (
     <div className="font-sans text-gray-800 bg-white min-h-screen">
-     
+      {loading && (
+        <div className="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center gap-4">
+          <img src="/images/logo-header.webp" alt="N&P" className="h-16 w-auto animate-pulse" />
+          <div className="w-8 h-8 border-4 border-(--primary-color) border-t-transparent rounded-full animate-spin" />
+        </div>
+      )}
       <Outlet />
       <FloatingButton />
     </div>
