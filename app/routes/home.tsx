@@ -141,7 +141,7 @@ export default function Home() {
 
       <section className="min-h-125 w-full bg-gray-50">
         <div className="w-full h-125 bg-white overflow-hidden rounded-b-[80px]">
-          <img src="/images/FEAIMG.webp" 
+          <img src="/images/hero.webp" 
           alt="cover image" 
           className="w-full h-full object-cover" />
         </div>
@@ -151,7 +151,7 @@ export default function Home() {
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-5xl mx-auto">
           <p className="text-center text-4xl text-gray-800 mb-2">ทำไมต้องเลือก</p>
-          <p className="text-center text-5xl w-fit mx-auto bg-(--primary-color) px-2 text-white mb-10">N&P คอนสตรัคชั่น</p>
+          <p className="text-center md:text-5xl text-3xl w-fit mx-auto bg-(--primary-color) px-2 text-white mb-10">N&P คอนสตรัคชั่น</p>
           <div className="grid sm:grid-cols-2 gap-6">
             {[
               { title: "ไม่มีการเบิกค่าจ้างล่วงหน้า", desc: "เราทำงานแบบไม่มีการเบิกค่าจ้างล่วงหน้า ทำงานเสร็จ ตรวจความเรียบร้อยแล้วค่อยจ่าย" },
@@ -173,9 +173,9 @@ export default function Home() {
 
       {/* Service Category Cards */}
       <section className="py-16 mx-auto relative">
-        <div className="min-h-[300px] flex flex-col justify-center items-center relative">
-          <p className="text-center text-5xl text-gray-800">รายละเอียดบริการ</p>
-          <p className="text-center text-4xl text-gray-800 mb-10 mt-2">จาก <span className="bg-(--primary-color) px-2 text-white">N&P คอนสตรัคชั่น</span></p>
+        <div className="min-h-[300px] flex flex-col md:px-0 px-4 justify-center items-center relative">
+          <p className="text-center md:text-5xl text-4xl text-gray-800">รายละเอียดบริการ</p>
+          <p className="text-center md:text-4xl text-3xl text-gray-800 mb-10 mt-2">จาก <span className="bg-(--primary-color) px-2 text-white">N&P คอนสตรัคชั่น</span></p>
           <img src="/images/engineer.webp" alt="" className="
              md:absolute bottom-0 md:left-[16%] h-48 md:h-64
               lg:h-80 w-auto object-contain pointer-events-none z-10" />
@@ -317,7 +317,7 @@ export default function Home() {
       {/* Before / After */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl text-center text-gray-800 mb-2">ภาพตัวอย่างก่อนและหลังทำ</h2>
+          <h2 className="text-4xl text-center text-gray-800 mb-2">ภาพตัวอย่าง<br/>ก่อนและหลังทำ</h2>
           <p className="text-center text-gray-500 mb-10">ผลงานจริงจาก N&P คอนสตรัคชั่น</p>
           <div className="grid  gap-6">
             {[
