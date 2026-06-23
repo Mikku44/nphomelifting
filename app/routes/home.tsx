@@ -43,7 +43,7 @@ const slides = [
     bg: "/images/FEAIMG.webp",
   },
   {
-    title: "เสาเข็ม",
+    title: "แก้ใขปัญหาบ้านทรุด",
     subtitle: "ตอกเสาเข็ม ลงเสาเข็ม โดยช่างมืออาชีพ",
     desc: "ได้มาตรฐาน ปลอดภัย มั่นคง ทุกหน้างาน",
     bg: "/images/เสาเข็ม/เสาเข็ม-7.jpg",
@@ -101,13 +101,13 @@ export default function Home() {
           }),
         }}
       />
-      <section className="relative text-white overflow-hidden">
+      {/* <section className="relative text-white overflow-hidden">
         <div className="embla" ref={emblaRef}>
           <div className="embla__container flex">
             {slides.map((s, i) => (
               <div key={i} className="embla__slide min-w-0 flex-[0_0_100%] relative"
                 style={{
-                  backgroundImage: `linear-gradient(rgba(0,0,0,0.30),rgba(0,0,100,0.60)), url('${s.bg}')`,
+                  backgroundImage: `linear-gradient(rgba(0,0,0,0.10),rgba(0,0,100,0.20)), url('${s.bg}')`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
@@ -137,13 +137,21 @@ export default function Home() {
         </div>
 
         
+      </section> */}
+
+      <section className="min-h-125 w-full bg-gray-50">
+        <div className="w-full h-125 bg-white overflow-hidden rounded-b-[80px]">
+          <img src="/images/FEAIMG.webp" 
+          alt="cover image" 
+          className="w-full h-full object-cover" />
+        </div>
       </section>
 
       {/* จุดเด่นของเรา */}
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-5xl mx-auto">
-          <p className="text-center text-4xl text-gray-800 mb-2">จุดเด่นของเรา</p>
-          <p className="text-center text-gray-500 mb-10">ทำไมต้องเลือก N&P คอนสตรัคชั่น</p>
+          <p className="text-center text-4xl text-gray-800 mb-2">ทำไมต้องเลือก</p>
+          <p className="text-center text-5xl w-fit mx-auto bg-(--primary-color) px-2 text-white mb-10">N&P คอนสตรัคชั่น</p>
           <div className="grid sm:grid-cols-2 gap-6">
             {[
               { title: "ไม่มีการเบิกค่าจ้างล่วงหน้า", desc: "เราทำงานแบบไม่มีการเบิกค่าจ้างล่วงหน้า ทำงานเสร็จ ตรวจความเรียบร้อยแล้วค่อยจ่าย" },
@@ -168,13 +176,13 @@ export default function Home() {
         <div className="min-h-[300px] flex flex-col justify-center items-center relative">
           <p className="text-center text-5xl text-gray-800">รายละเอียดบริการ</p>
           <p className="text-center text-4xl text-gray-800 mb-10 mt-2">จาก <span className="bg-(--primary-color) px-2 text-white">N&P คอนสตรัคชั่น</span></p>
-             <img src="/images/engineer.webp" alt="" className="
+          <img src="/images/engineer.webp" alt="" className="
              md:absolute bottom-0 md:left-[16%] h-48 md:h-64
               lg:h-80 w-auto object-contain pointer-events-none z-10" />
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 ">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-4">
           {[
-            { to: "/pile", img: "เสาเข็ม/เสาเข็ม-1.jpg", label: "เสาเข็ม", tag: "งานฐานราก" },
+            { to: "/pile", img: "เสาเข็ม/เสาเข็ม-1.jpg", label: "แก้ใขปัญหาบ้านทรุด", tag: "งานฐานราก" },
             { to: "/concrete-lifting", img: "ดีดบ้านปูน/ดีดบ้านปูน-1.jpg", label: "ดีดบ้านปูน", tag: "ยกบ้านปูน" },
             { to: "/wood-lifting", img: "ดีดบ้านไม้/ดีดบ้านไม้-1.jpg", label: "ดีดบ้านไม้", tag: "ยกบ้านไม้" },
             { to: "/house-moving", img: "ย้ายบ้าน/ย้ายบ้าน-1.jpg", label: "รับย้ายบ้าน", tag: "เคลื่อนย้าย" },
@@ -204,14 +212,14 @@ export default function Home() {
                   tracking-[0.15em] uppercase py-2.5 px-6 rounded
                    transition-colors duration-200 text-center">
                   ดูบริการ <BiChevronRight
-                  className="group-hover:translate-x-1 transition-transform duration-200"
-                  size={28} />
+                    className="group-hover:translate-x-1 transition-transform duration-200"
+                    size={28} />
                 </span>
               </div>
             </Link>
           ))}
         </div>
-       
+
       </section>
 
       {/* Contact Section */}
@@ -267,22 +275,21 @@ export default function Home() {
         <p className="text-center text-4xl  text-gray-800">รับบริการได้อย่างมั่นใจ</p>
         <p className="text-center text-3xl  text-gray-800 mb-10 mt-2">ที่ <span className="bg-(--primary-color) px-2 text-white">
           N&P คอนสตรัคชั่น</span></p>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2  gap-6">
           {[
             { icon: <FaHouseCrack />, title: "แก้ปัญหาบ้านทรุด", desc: "ทาง N&P เชี่ยวชาญการแก้ปัญหาบ้านทรุด บ้านเอียง รับดีดบ้าน ดีดบ้านราคาถูก ช่างดีดบ้าน" },
             { icon: <FaClock />, title: "แก้ปัญหาบ้านเอียง", desc: "บ้านเอียง ก็เป็นปัญหาที่ควรปรึกษาผู้เชี่ยวชาญมาแก้ไขอย่างเร่งด่วน เปลี่ยนเสาบ้าน ยกบ้านปูน" },
-            { icon: <FaCoins />, title: "แก้ปัญหารอยร้าว", desc: "แม้บ้านจะเกิดรอยร้าวเพียงเล็กน้อย แต่รอยร้าวเล็ก ๆ นี้เมื่อเกิดเหตุครั้งต่อไปอาจเป็นสาเหตุหลักได้" },
             { icon: <FaCircleCheck />, title: "บริการดีดบ้าน", desc: "บริการยกบ้าน บริการย้ายบ้าน ดีดบ้านไม้ ดีดบ้านปูน คือสิ่งที่ N&P ถูกยกเป็นบริษัทอันดับต้น ๆ ประเทศ" },
             { icon: <FaTruckMoving />, title: "บริการเลื่อนบ้าน", desc: "บริการเคลื่อนย้ายบ้าน เลื่อนบ้าน ย้ายบ้าน ไม่ใช่สิ่งที่ใครจะทำก็ได้ เพราะไม่สามารถผิดพลาดได้" },
-            { icon: <FaWrench />, title: "บริการซ่อมบ้าน", desc: "ทาง N&P ยินดีให้คำปรึกษา สำรวจหน้างาน ดีดบ้านปูนราคา ช่วยประเมินให้คุณลูกค้าแก้ตรงจุดที่สุด" },
+
           ].map((svc, i) => (
             <div key={i} className="flex flex-col gap-4 p-5 bg-gray-50 rounded-xl">
               <span className="text-2xl shrink-0 text-(--primary-color)">{svc.icon}</span>
               <div>
                 <h3 className="font-medium text-2xl text-gray-900">{svc.title}</h3>
                 <p className="text-gray-500 text-lg mt-1">{svc.desc}</p>
-          </div>
-        </div>
+              </div>
+            </div>
           ))}
         </div>
       </section>
@@ -318,7 +325,7 @@ export default function Home() {
               { before: "/images/5-before.webp", after: "/images/5-after.webp" },
               { before: "/images/before-ช่างดีดบ้าน-5.webp", after: "/images/after-ช่างดีดบ้าน-5.webp" },
             ].map((pair, i) => (
-             <div key={i} className={`bg-gray-50 rounded-sm overflow-hidden shadow-sm ${i == 0 ? 'md:col-span-2' : ''}`}>
+              <div key={i} className={`bg-gray-50 rounded-sm overflow-hidden shadow-sm ${i == 0 ? 'md:col-span-2' : ''}`}>
                 <div className="grid grid-cols-2">
                   <div>
                     <div className="bg-(--primary-color) text-white text-[10px] font-bold tracking-wider text-center py-1">ก่อน</div>
@@ -342,14 +349,7 @@ export default function Home() {
 
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
           <div>
-            <div className="rounded-xl overflow-hidden shadow-md mb-6 w-full">
-              <iframe
-                src="https://maps.google.com/maps?q=%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A3&t=m&z=17&output=embed"
-                title="กรุงเทพมหานคร"
-                className="w-full h-72"
-                loading="lazy"
-              />
-            </div>
+
             {/* FAQ Accordion */}
             <div className="space-y-2">
               {[
@@ -382,7 +382,7 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div className=" w-full ">
+          <div className="place-self-center justify-center justify-items-center w-full ">
             <iframe
               src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fnphomeco.th&tabs=timeline&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=331923862254014"
               height="500"

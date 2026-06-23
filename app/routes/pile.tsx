@@ -9,11 +9,11 @@ import ImageGallery from "../components/ImageGallery";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "บริการตอกเสาเข็ม | N&P คอนสตรัคชั่น" },
-    { name: "description", content: "บริการตอกเสาเข็มไอบีม เสาเข็มซีเมนต์ เปลี่ยนเสาเข็มเดิม เสริมเสาเข็ม โดยทีมช่างมืออาชีพ N&P คอนสตรัคชั่น ปรึกษาฟรี 061-0864789" },
-    { name: "keywords", content: "ตอกเสาเข็ม, เสาเข็มไอบีม, เสาเข็มซีเมนต์, ลงเสาเข็ม, เปลี่ยนเสาเข็ม, N&P คอนสตรัคชั่น" },
+    { name: "description", content: "บริการตอกเสาเข็ม แก้ใขปัญหาบ้านทรุด เปลี่ยนเสาบ้าน เสาเข็มไอบีม เสาเข็มซีเมนต์ เปลี่ยนเสาเข็มเดิม เสริมเสาเข็ม โดยทีมช่างมืออาชีพ N&P คอนสตรัคชั่น ปรึกษาฟรี 061-0864789" },
+    { name: "keywords", content: "แก้ใขปัญหาบ้านทรุด, เปลี่ยนเสาบ้าน, ตอกเสาเข็ม, เสาเข็มไอบีม, เสาเข็มซีเมนต์, ลงเสาเข็ม, เปลี่ยนเสาเข็ม, N&P คอนสตรัคชั่น" },
     { name: "robots", content: "index, follow" },
     { property: "og:title", content: "บริการตอกเสาเข็ม | N&P คอนสตรัคชั่น" },
-    { property: "og:description", content: "บริการตอกเสาเข็มไอบีม เสาเข็มซีเมนต์ เปลี่ยนเสาเข็ม โดยทีมช่างมืออาชีพ N&P คอนสตรัคชั่น" },
+    { property: "og:description", content: "แก้ใขปัญหาบ้านทรุด เปลี่ยนเสาบ้าน ตอกเสาเข็มไอบีม เสาเข็มซีเมนต์ เปลี่ยนเสาเข็ม โดยทีมช่างมืออาชีพ N&P คอนสตรัคชั่น" },
     { property: "og:type", content: "website" },
     { property: "og:url", content: "https://nphomelifting.com/pile" },
     { property: "og:image", content: "https://nphomelifting.vercel.app/cover-image.png" },
@@ -53,7 +53,7 @@ export default function PilePage() {
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-3xl md:text-5xl font-bold">เสาเข็ม</h1>
           <p className="text-blue-200 mt-4 max-w-2xl mx-auto text-xl font-thin">
-            บริการตอกเสาเข็ม ลงเสาเข็ม โดยทีมช่างมืออาชีพ ได้มาตรฐาน ปลอดภัย มั่นคง
+            แก้ใขปัญหาบ้านทรุด เปลี่ยนเสาบ้าน ตอกเสาเข็ม ลงเสาเข็ม โดยทีมช่างมืออาชีพ ได้มาตรฐาน ปลอดภัย มั่นคง
           </p>
         </div>
       </section>
@@ -105,9 +105,9 @@ export default function PilePage() {
           <p className="text-center text-gray-500 mb-10">โดย N&P คอนสตรัคชั่น</p>
           <div className="grid sm:grid-cols-2 gap-6">
             {[
-              { title: "ตอกเสาเข็มไอบีม", desc: "เสาเข็มไอบีม มาตรฐานอุตสาหกรรม เหมาะกับงานบ้านทรุด บ้านเอียง ทนทาน รับน้ำหนักได้ดี" },
+              { title: "แก้ใขปัญหาบ้านทรุด", desc: "แก้ใขปัญหาบ้านทรุด บ้านเอียง ด้วยเสาเข็มไอบีมมาตรฐานอุตสาหกรรม ทนทาน รับน้ำหนักได้ดี " },
               { title: "ตอกเสาเข็มซีเมนต์", desc: "เสาเข็มซีเมนต์อัดแรง คุณภาพสูง ได้มาตรฐาน มั่นคงแข็งแรง รับน้ำหนักอาคาร" },
-              { title: "เปลี่ยนเสาเข็มเดิม", desc: "เปลี่ยนเสาเข็มเก่าที่หมดอายุ เสื่อมสภาพ ด้วยเสาเข็มใหม่ ได้มาตรฐาน พร้อมรับประกัน" },
+              { title: "เปลี่ยนเสาบ้าน", desc: "เปลี่ยนเสาบ้าน เสาเข็มเก่าที่หมดอายุ เสื่อมสภาพ ด้วยเสาเข็มใหม่ ได้มาตรฐาน พร้อมรับประกัน" },
               { title: "เสริมเสาเข็มเพิ่ม", desc: "เสริมเสาเข็มเพิ่มเติม เพื่อเพิ่มความแข็งแรงให้โครงสร้างบ้าน ป้องกันการทรุดตัวในอนาคต" },
             ].map((item, i) => (
               <div key={i} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">

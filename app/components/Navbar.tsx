@@ -6,7 +6,7 @@ type Props = {
 };
 
 const navLinks = [
-  { to: "/pile", label: "ตอกเสาเข็ม" },
+  { to: "/pile", label: "แก้ใขปัญหาบ้านทรุด" },
   { to: "/concrete-lifting", label: "ดีดบ้านปูน" },
   { to: "/wood-lifting", label: "ดีดบ้านไม้" },
   { to: "/house-moving", label: "รับย้ายบ้าน" },
@@ -58,12 +58,16 @@ export default function Navbar({ variant }: Props) {
             />
           </a>
           <nav className="hidden md:flex items-center gap-6">
-            <a href="/#contact" className="navbar-link">ติดต่อ</a>
-            <a href="/#Reviews" className="navbar-link">ดูรีวิว</a>
+
             {navLinks.map((l) => (
               <Link key={l.to} to={l.to} className="navbar-link">{l.label}</Link>
             ))}
+            <a href="/#Reviews" className="navbar-link">ดูรีวิว</a>
+            <a href="/#contact" style={{ color: "white" }}
+             className="navbar-link bg-(--primary-color)
+             px-7 py-2 rounded-full text-white hover:opacity-90">ติดต่อเรา</a>
           </nav>
+
           <button onClick={() => setOpen(true)} className="md:hidden p-2 text-gray-600">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
