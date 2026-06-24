@@ -7,12 +7,12 @@ import { BiChevronRight } from "react-icons/bi";
 
 export function meta({ }: Route.MetaArgs) {
   return [
-    { title: "รีบดีดบ้าน ยกบ้าน ย้ายบ้าน เลื่อนบ้าน กรุงเทพ | โดย N&P คอนสตรัคชั่น" },
-    { name: "description", content: "แก้ปัญหาบ้านทรุด บ้านเอียง รอยร้าว รับดีดบ้าน ยกบ้าน ย้ายบ้าน เลื่อนบ้าน กรุงเทพและทั่วประเทศ โดย N&P คอนสตรัคชั่น ช่างมากประสบการณ์ 10 ปี ปรึกษาฟรี 061-0864789" },
-    { name: "keywords", content: "ดีดบ้าน, ยกบ้าน, ย้ายบ้าน, เลื่อนบ้าน, บ้านทรุด, บ้านเอียง, ซ่อมบ้าน, ตอกเสาเข็ม, N&P คอนสตรัคชั่น, กรุงเทพ" },
+    { title: "รับดีดบ้าน ยกบ้าน ย้ายบ้าน เลื่อนบ้าน | โดย N&P คอนสตรัคชั่น" },
+    { name: "description", content: "แก้ปัญหาบ้านทรุด บ้านเอียง รอยร้าว รับดีดบ้าน ยกบ้าน ย้ายบ้าน เลื่อนบ้าน ทั่วประเทศ โดย N&P คอนสตรัคชั่น ช่างมากประสบการณ์ 10 ปี ปรึกษาฟรี 061-0864789" },
+    { name: "keywords", content: "ดีดบ้าน, ยกบ้าน, ย้ายบ้าน, เลื่อนบ้าน, บ้านทรุด, บ้านเอียง, ซ่อมบ้าน, ตอกเสาเข็ม, N&P คอนสตรัคชั่น" },
     { name: "author", content: "N&P คอนสตรัคชั่น" },
     { name: "robots", content: "index, follow" },
-    { property: "og:title", content: "รีบดีดบ้าน ยกบ้าน ย้ายบ้าน เลื่อนบ้าน กรุงเทพ | โดย N&P คอนสตรัคชั่น" },
+    { property: "og:title", content: "รับดีดบ้าน ยกบ้าน ย้ายบ้าน เลื่อนบ้าน | โดย N&P คอนสตรัคชั่น" },
     { property: "og:description", content: "แก้ปัญหาบ้านทรุด บ้านเอียง รอยร้าว รับดีดบ้าน ยกบ้าน ย้ายบ้าน เลื่อนบ้าน โดย N&P คอนสตรัคชั่น" },
     { property: "og:type", content: "website" },
     { property: "og:url", content: "https://nphomelifting.com" },
@@ -20,7 +20,7 @@ export function meta({ }: Route.MetaArgs) {
     { property: "og:locale", content: "th_TH" },
     { property: "og:site_name", content: "N&P คอนสตรัคชั่น" },
     { name: "twitter:card", content: "summary_large_image" },
-    { name: "twitter:title", content: "รีบดีดบ้าน ยกบ้าน ย้ายบ้าน เลื่อนบ้าน กรุงเทพ | โดย N&P คอนสตรัคชั่น" },
+    { name: "twitter:title", content: "รับดีดบ้าน ยกบ้าน ย้ายบ้าน เลื่อนบ้าน | โดย N&P คอนสตรัคชั่น" },
     { name: "twitter:description", content: "แก้ปัญหาบ้านทรุด บ้านเอียง รอยร้าว รับดีดบ้าน ยกบ้าน ย้ายบ้าน เลื่อนบ้าน โดย N&P คอนสตรัคชั่น" },
     { name: "twitter:image", content: "https://nphomelifting.vercel.app/cover-image.png" },
     { tagName: "link", rel: "canonical", href: "https://nphomelifting.com" },
@@ -46,7 +46,7 @@ export default function Home() {
             url: "https://nphomelifting.com",
             telephone: "061-0864789",
             email: "nphomelifting@gmail.com",
-            address: { "@type": "PostalAddress", addressLocality: "กรุงเทพ", addressCountry: "TH" },
+            address: { "@type": "PostalAddress", addressLocality: "ทั่วประเทศ", addressCountry: "TH" },
             areaServed: "ทั่วประเทศ",
             priceRange: "ตามหน้างาน",
             openingHours: "Mo-Su 07:00-18:00",
@@ -106,7 +106,7 @@ export default function Home() {
                 className="w-full h-auto object-contain"
                 alt="N&P คอนสตรัคชั่น"
               />
-              
+
             </div>
           </div>
         </div>
@@ -282,7 +282,7 @@ export default function Home() {
       {/* Before / After */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl text-center text-gray-800 mb-2">ภาพตัวอย่าง<br/>ก่อนและหลังทำ</h2>
+          <h2 className="text-4xl text-center text-gray-800 mb-2">ภาพตัวอย่าง<br />ก่อนและหลังทำ</h2>
           <p className="text-center text-gray-500 mb-10">ผลงานจริงจาก N&P คอนสตรัคชั่น</p>
           <div className="grid  gap-6">
             {[
@@ -347,15 +347,23 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div className="place-self-center justify-center justify-items-center w-full ">
-            <iframe
-              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fnphomeco.th&tabs=timeline&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=331923862254014"
-              height="500"
-              width="100%"
-              className="mb-2 w-full "
-              loading="lazy"
-              title="Facebook Page"
-            />
+          <div className="place-self-center justify-center justify-items-center ">
+            <a href="https://www.facebook.com/nphomeco.th" target="_blank" rel="noopener noreferrer" className="w-full flex items-center justify-center gap-2 mb-4 px-6 py-3 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-700 transition">
+              <FaFacebook size={20} />
+              เพจเฟสบุ๊ค
+            </a>
+            <div className="w-full bg-white rounded-xl border border-gray-100 shadow-sm p-4 overflow-hidden">
+              <iframe
+                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fnphomeco.th&tabs=timeline&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=331923862254014"
+                height="500"
+                style={{ border: "none", overflow: "hidden" }}
+                className="w-full rounded-lg"
+                allowFullScreen={true}
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                loading="lazy"
+                title="N&P คอนสตรัคชั่น Facebook Page"
+              />
+            </div>
           </div>
         </div>
       </section>

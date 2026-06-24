@@ -20,8 +20,8 @@ export default function Footer({ variant }: Props) {
             />
           </div>
           <div className="text-center md:text-right">
-            <p className="text-(--primary-color) font-semibold text-4xl">รีบดีดบ้าน ยกบ้าน ย้ายบ้าน <br/> เลื่อนบ้าน กรุงเทพ</p>
-            <p className="text-gray-400 text-sm mt-1">แก้ปัญหาบ้านทรุด เลื่อนบ้าน ช่างซ่อมบ้านทรุด ในกรุงเทพ</p>
+            <p className="text-(--primary-color) font-semibold md:text-4xl text-3xl">รับดีดบ้าน ยกบ้าน ย้ายบ้าน <br/> เลื่อนบ้าน แก้ใขปัญหาบ้านทรุด</p>
+            <p className="text-gray-400 text-sm mt-1">แก้ปัญหาบ้านทรุด เลื่อนบ้าน ช่างซ่อมบ้านทรุด</p>
             <div className="flex justify-center md:justify-end gap-3 mt-4">
               <a href="https://www.facebook.com/nphomeco.th" className="w-10 h-10 rounded-full bg-gray-800 hover:bg-blue-700 flex items-center justify-center text-white transition">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 512 512">
@@ -46,7 +46,7 @@ export default function Footer({ variant }: Props) {
           </div>
         </div>
         <div className=" py-4 text-center text-xs">
-          Copyright © 2026 รีบดีดบ้าน ยกบ้าน ย้ายบ้าน เลื่อนบ้าน กรุงเทพ | โดย N&P คอนสตรัคชั่น 
+          Copyright © 2026 รับดีดบ้าน ยกบ้าน ย้ายบ้าน เลื่อนบ้าน แก้ใขปัญหาบ้านทรุด | โดย N&P คอนสตรัคชั่น 
         </div>
       </footer>
     );
