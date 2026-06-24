@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import { useState } from "react";
 
 type Props = {
@@ -14,6 +14,9 @@ const navLinks = [
 
 export default function Navbar({ variant }: Props) {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
+
+  const isActive = (path: string) => location.pathname === path;
 
   const drawer = (
     <>
@@ -32,13 +35,13 @@ export default function Navbar({ variant }: Props) {
           </div>
           <nav className="flex flex-col gap-4">
             {variant === "service" && (
-              <Link to="/" onClick={() => setOpen(false)} className="text-lg font-medium text-gray-700 hover:text-(--primary-color)">หน้าแรก</Link>
+              <Link to="/" onClick={() => setOpen(false)} className={`text-lg font-medium ${isActive("/") ? "text-(--primary-color) font-semibold" : "text-gray-700 hover:text-(--primary-color)"}`}>หน้าแรก</Link>
             )}
             <a href="/#contact" onClick={() => setOpen(false)} className="text-lg font-medium text-gray-700 hover:text-(--primary-color)">ติดต่อ</a>
             <a href="/#Reviews" onClick={() => setOpen(false)} className="text-lg font-medium text-gray-700 hover:text-(--primary-color)">ดูรีวิว</a>
             <hr className="border-gray-200" />
             {navLinks.map((l) => (
-              <Link key={l.to} to={l.to} onClick={() => setOpen(false)} className="text-lg font-medium text-gray-700 hover:text-(--primary-color)">{l.label}</Link>
+              <Link key={l.to} to={l.to} onClick={() => setOpen(false)} className={`text-lg font-medium ${isActive(l.to) ? "text-(--primary-color) font-semibold" : "text-gray-700 hover:text-(--primary-color)"}`}>{l.label}</Link>
             ))}
           </nav>
         </aside>
@@ -58,9 +61,8 @@ export default function Navbar({ variant }: Props) {
             />
           </a>
           <nav className="hidden md:flex items-center gap-6">
-
             {navLinks.map((l) => (
-              <Link key={l.to} to={l.to} className="navbar-link">{l.label}</Link>
+              <Link key={l.to} to={l.to} className={`navbar-link ${isActive(l.to) ? "text-(--primary-color) font-semibold" : ""}`}>{l.label}</Link>
             ))}
             <a href="/#Reviews" className="navbar-link">ดูรีวิว</a>
             <a href="/#contact" style={{ color: "white" }}
@@ -90,9 +92,12 @@ export default function Navbar({ variant }: Props) {
           />
         </Link>
         <nav className="hidden md:flex items-center gap-6">
+          <Link to="/" className={`navbar-link ${isActive("/") ? "text-(--primary-color) font-semibold" : ""}`}>หน้าแรก</Link>
+          {navLinks.map((l) => (
+            <Link key={l.to} to={l.to} className={`navbar-link ${isActive(l.to) ? "text-(--primary-color) font-semibold" : ""}`}>{l.label}</Link>
+          ))}
           <Link to="/#contact" className="navbar-link">ติดต่อ</Link>
           <Link to="/#Reviews" className="navbar-link">ดูรีวิว</Link>
-          <Link to="/" className="navbar-link">หน้าแรก</Link>
         </nav>
         <button onClick={() => setOpen(true)} className="md:hidden p-2 text-gray-600">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

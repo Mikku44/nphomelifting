@@ -1,7 +1,5 @@
 import type { Route } from "./+types/home";
 import { Link } from "react-router";
-import useEmblaCarousel from "embla-carousel-react";
-import { useCallback, useEffect, useState } from "react";
 import { FaFacebook, FaHouseCrack, FaClock, FaCoins, FaCircleCheck, FaTruckMoving, FaWrench } from "react-icons/fa6";
 import { FiPhone, FiMail } from "react-icons/fi";
 import { SiLine } from "react-icons/si";
@@ -34,51 +32,7 @@ const reviewImages = Array.from({ length: 16 }, (_, i) => ({
   alt: "ดีดบ้าน เลื่อนบ้าน รีวิว",
 }));
 
-const slides = [
-
-  {
-    title: "รับดีดบ้าน ยกบ้าน เลื่อนบ้าน",
-    subtitle: "แก้บ้านทรุด โดยช่างมืออาชีพ",
-    desc: "N&P คอนสตรัคชั่น ผลงานมากกว่า 1,000 หน้างาน ตรวจเช็คก่อนส่งมอบโดยเจ้าของ",
-    bg: "/images/FEAIMG.webp",
-  },
-  {
-    title: "แก้ใขปัญหาบ้านทรุด",
-    subtitle: "ตอกเสาเข็ม ลงเสาเข็ม โดยช่างมืออาชีพ",
-    desc: "ได้มาตรฐาน ปลอดภัย มั่นคง ทุกหน้างาน",
-    bg: "/images/เสาเข็ม/เสาเข็ม-7.jpg",
-  },
-  {
-    title: "ดีดบ้านปูน",
-    subtitle: "ยกระดับบ้านปูน ให้สูงขึ้น ปลอดภัย",
-    desc: "ทีมช่างมากประสบการณ์ พร้อมรับประกันผลงาน",
-    bg: "/images/ดีดบ้านปูน/ดีดบ้านปูน-1.jpg",
-  },
-  {
-    title: "รับย้ายบ้าน",
-    subtitle: "เคลื่อนย้ายบ้าน เลื่อนบ้าน ปลอดภัย",
-    desc: "มาตรฐานวิศวกรรม พร้อมรับประกัน",
-    bg: "/images/ย้ายบ้าน/ย้ายบ้าน-1.jpg",
-  },
-];
-
 export default function Home() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, duration: 40 });
-  const [selectedIndex, setSelectedIndex] = useState(0);
-
-  const onSelect = useCallback(() => {
-    if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedSnap());
-  }, [emblaApi]);
-
-  useEffect(() => {
-    if (!emblaApi) return;
-    onSelect();
-    emblaApi.on("select", onSelect);
-    const t = setInterval(() => emblaApi.goToNext(), 5000);
-    return () => { clearInterval(t); emblaApi.off("select", onSelect); };
-  }, [emblaApi, onSelect]);
-
   return (
     <>
       <script
@@ -101,49 +55,60 @@ export default function Home() {
           }),
         }}
       />
-      {/* <section className="relative text-white overflow-hidden">
-        <div className="embla" ref={emblaRef}>
-          <div className="embla__container flex">
-            {slides.map((s, i) => (
-              <div key={i} className="embla__slide min-w-0 flex-[0_0_100%] relative"
-                style={{
-                  backgroundImage: `linear-gradient(rgba(0,0,0,0.10),rgba(0,0,100,0.20)), url('${s.bg}')`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              >
-                <div className="max-w-6xl mx-auto px-20 absolute bottom-10 z-10">
-                  <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                    {s.title}
-                  </h1>
-                  <h2 className="text-xl md:text-3xl mt-3">
-                    {s.subtitle}
-                  </h2>
-                  <p className="text-blue-100 mt-4 text-sm md:text-base max-w-xl">
-                    {s.desc}
-                  </p>
-                </div>
-              </div>
-            ))}
+      <section id="hero" className="relative min-h-[90vh] pt-20 md:pt-0 flex items-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/images/hero-1.webp"
+            className="w-full h-full object-cover opacity-30"
+            alt=""
+            width="1920"
+            height="1080"
+          />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
+          <div className="lg:col-span-7 space-y-8">
+            <div className="animate-[fadeInUp_0.6s_ease-out]">
+              <span className="inline-block text-xs uppercase tracking-[0.3em] text-gray-500 mb-4">
+                ช่างดีดบ้านมืออาชีพ
+              </span>
+              <h1 className="text-5xl md:text-7xl lg:text-8xl leading-[1.1] text-neutral-900 tracking-tight">
+                <span className="block">N&P</span>
+                <span className="block italic font-light ml-8 md:ml-12 text-neutral-700">
+                  คอนสตรัคชั่น
+                </span>
+              </h1>
+            </div>
+
+            <p className="animate-[fadeInUp_0.6s_ease-out_0.2s_both] max-w-md text-lg text-neutral-600 leading-relaxed font-light">
+              รับดีดบ้าน ยกบ้าน ย้ายบ้าน เลื่อนบ้าน แก้ปัญหาบ้านทรุด
+              โดยทีมช่างมากประสบการณ์ ผลงานกว่า 1,000 หน้างาน ตรวจเช็คก่อนส่งมอบโดยเจ้าของ
+            </p>
+
+            <div className="animate-[fadeInUp_0.6s_ease-out_0.4s_both] flex gap-2">
+              <a href="tel:0610864789" className="group relative px-8 py-4 bg-(--primary-color) rounded-full text-white flex items-center transition-all duration-300 hover:pr-12">
+                <span className="relative z-10 uppercase tracking-widest text-sm font-medium">ปรึกษาฟรี</span>
+                <FiPhone className="absolute right-4 opacity-0 group-hover:opacity-100 transition-all duration-300" />
+              </a>
+              <Link to="/#services" className="group relative px-8 py-4 text-zinc-800 flex items-center transition-all duration-300 pr-10 hover:pr-12">
+                <span className="relative z-10 uppercase tracking-widest text-sm font-medium">บริการของเรา</span>
+                <span className="absolute right-4"><BiChevronRight size={20} /></span>
+              </Link>
+            </div>
           </div>
-        </div>
 
-        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-          {slides.map((_, i) => (
-            <button key={i} onClick={() => emblaApi?.goTo(i)}
-              className={`w-2.5 h-2.5 rounded-full transition-all ${i === selectedIndex ? "bg-(--primary-color) w-6" : "bg-white/50 hover:bg-white/80"}`}
-            />
-          ))}
-        </div>
-
-        
-      </section> */}
-
-      <section className="min-h-125 w-full bg-gray-50">
-        <div className="w-full h-125 bg-white overflow-hidden rounded-b-[80px]">
-          <img src="/images/hero.webp" 
-          alt="cover image" 
-          className="w-full h-full object-cover" />
+          <div className="animate-[fadeIn_1s_ease-out] lg:col-span-5 relative flex items-center justify-center">
+            <div className="relative w-[350px] md:w-[500px] bottom-[-10px] md:bottom-[-60px] z-10">
+              <img
+                src="/images/engineer-2.webp"
+                width="500"
+                height="350"
+                className="w-full h-auto object-contain"
+                alt="N&P คอนสตรัคชั่น"
+              />
+              
+            </div>
+          </div>
         </div>
       </section>
 
@@ -172,7 +137,7 @@ export default function Home() {
       </section>
 
       {/* Service Category Cards */}
-      <section className="py-16 mx-auto relative">
+      <section id="services" className="py-16 mx-auto relative">
         <div className="min-h-[300px] flex flex-col md:px-0 px-4 justify-center items-center relative">
           <p className="text-center md:text-5xl text-4xl text-gray-800">รายละเอียดบริการ</p>
           <p className="text-center md:text-4xl text-3xl text-gray-800 mb-10 mt-2">จาก <span className="bg-(--primary-color) px-2 text-white">N&P คอนสตรัคชั่น</span></p>
